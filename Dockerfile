@@ -5,6 +5,9 @@ WORKDIR /app
 
 COPY . .
 
+# Update system packages and install dependencies
+RUN apt-get update && apt-get upgrade -y
+
 # Upgrade pip and install dependencies with warning suppression
 RUN pip install --upgrade pip --no-warn-script-location --root-user-action=ignore && \
     pip install --no-warn-script-location --root-user-action=ignore -r requirements.txt
