@@ -27,3 +27,7 @@ docker run -it -d --name app -p 5000:5000 sak1t
 | Deploy on Cloud      | Push Docker image to Cloud / EC2                |
 | Test in Production   | Validate with real users                        |
 
+---
+## Trivy scan
+- Docker Image: `trivy image loan_pre_ml:v1.2`
+- Project folder and files: `trivy fs loan_eligibility_web/`
