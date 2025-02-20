@@ -4,7 +4,8 @@ WORKDIR /app
 
 COPY . .
 
-RUN pip install --upgrade pip && pip install -r requirements.txt
+RUN pip install --upgrade pip && \
+    pip install --no-warn-script-location --root-user-action=ignore -r requirements.txt
 
 RUN python train_model.py
 
